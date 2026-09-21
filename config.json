@@ -3,26 +3,26 @@
         "batch_size": 4,
         "img_size": 32,
         "img_channels": 3,
-        "embedding_dim": 64,
-        "time_emb_dim": 32
+        "embedding_dim": 128,
+        "time_emb_dim": 64
     },
     "time_mlp": {
-        "dim": 32
+        "dim": 64
     },
     "text_encoder": {
-        "embedding_dim": 64,
+        "embedding_dim": 128,
         "n_layers": 2,
         "n_heads": 4
     },
     "unet": {
-        "base_channels": 16,
-        "time_emb_dim": 32,
-        "context_dim": 64
+        "base_channels": 32,
+        "time_emb_dim": 64,
+        "context_dim": 128
     },
     "text_to_image_model": {
-        "embedding_dim": 64,
-        "time_emb_dim": 32,
-        "base_channels": 16,
+        "embedding_dim": 128,
+        "time_emb_dim": 64,
+        "base_channels": 32,
         "img_channels": 3
     },
     "flow_matching": {
@@ -30,7 +30,7 @@
         "n_steps": 50
     },
     "training": {
-        "epochs": 20,
+        "epochs": 40,
         "batch_size": 128,
         "lr": 2e-4,
         "log_every": 50,

@@ -69,9 +69,9 @@ A detailed report (method, experiments, results) is available at
 
 ## Results
 
-This is a small model (~0.5M parameters) trained for 20 epochs on a single
-Mac, so outputs are blurry but consistently follow the requested color,
-digit shape and rotation:
+This is a small model (~2M parameters) trained for 40 epochs on a single
+Mac. It consistently follows the requested color and produces clean,
+recognizable digit shapes and rotations:
 
 <p align="center">
   <img src="report/figures/grid_final_samples.png" width="450" alt="Grid of final generated samples">

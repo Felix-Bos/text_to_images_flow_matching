@@ -86,13 +86,14 @@ def tensor_to_numpy_image(img_tensor, upscale=16):
 
 
 def build_app(ckpt_path="checkpoints/model.pt"):
+    print("Loading model, this can take up to ~20s...", flush=True)
     device = get_device()
     model, config, status = load_model(ckpt_path, device)
     flow_cfg = config["flow_matching"]
     general_cfg = config["general"]
     img_size = general_cfg["img_size"]
     img_channels = general_cfg["img_channels"]
-    print(status)
+    print(status, flush=True)
 
     def generate(prompt_text, color_dd, digit_dd, angle_slider, n_steps, use_free_text):
         if use_free_text and prompt_text.strip():
@@ -171,4 +172,5 @@ if __name__ == "__main__":
     """
 
     app = build_app(ckpt_path=args.ckpt)
+    print("Starting the web interface... open the URL printed below in your browser.", flush=True)
     app.queue().launch(css=css)

@@ -113,9 +113,11 @@ Launch the interactive Gradio app once you have a trained checkpoint:
 python -m src.generate --ckpt checkpoints/model.pt
 ```
 
-Open the printed local URL, type a free-form prompt (e.g. `"a green 0
-rotated 180 degrees"`) or use the dropdown menus, and watch the image
-denoise step by step.
+Loading the model takes up to ~20 seconds and prints status messages while
+it does — this is expected, wait for the `Running on local URL: ...` line.
+Open that URL (typically `http://127.0.0.1:7860`), type a free-form prompt
+(e.g. `"a green 0 rotated 180 degrees"`) or use the dropdown menus, and
+watch the image denoise step by step.
 
 ## Configuration
 
